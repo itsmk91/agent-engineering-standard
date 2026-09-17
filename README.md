@@ -35,8 +35,17 @@ Both skills are in this repo — [`skills/`](skills).
 
 ## Use it
 
+One line, for every project on your machine:
+
+```bash
+npx skills add itsmk91/agent-engineering-standard -g
+```
+
+Or copy them by hand:
+
 ```bash
 git clone https://github.com/itsmk91/agent-engineering-standard.git
+mkdir -p ~/.claude/skills
 cp -R agent-engineering-standard/skills/software-engineering-build-standard ~/.claude/skills/
 cp -R agent-engineering-standard/skills/engineering-builder-handoff ~/.claude/skills/
 ```

@@ -62,7 +62,7 @@ Determine the current architecture before proposing a target. Do not rebuild a f
 
 REQUIREMENTS → ARCHITECTURE → REPOSITORY FOUNDATION → DATA/STATE MODEL → TEST STRATEGY → IMPLEMENTATION
 
-Before substantial feature development, decide: repository boundary, source structure, application composition, domain strategy, feature strategy, persistence boundary, platform boundaries, state ownership, dependency direction, testing strategy, tooling location, documentation location, generated-artifact policy and Git baseline. Decide where responsibilities belong before the project grows, but create only the minimum foundation the product needs — never dozens of speculative feature files, and no architecture a tiny project does not need.
+Before substantial feature development, decide: repository boundary, source structure, application composition, domain strategy, feature strategy, persistence boundary, platform boundaries, state ownership, dependency direction, testing strategy, tooling location, documentation location, generated-artifact policy and Git baseline. Decide where responsibilities belong before the project grows, but create only the minimum foundation the product needs — never dozens of speculative feature files, and no architecture a tiny project does not need. [references/layout-map.md](references/layout-map.md) carries the full layout and the moment each piece becomes due: start from the six pieces named there, and create only what the product has already earned.
 
 ### Engineering-quality audit or cleanup (§28)
 
@@ -139,6 +139,7 @@ Working code alone is not done. Before declaring substantial work complete, expl
 
 | File | Load when the work involves |
 |---|---|
+| [references/layout-map.md](references/layout-map.md) | creating a project or adding a part to one, and deciding where a folder or a file belongs: the full layout, and when each piece becomes due |
 | [references/architecture-and-boundaries.md](references/architecture-and-boundaries.md) | where code lives, feature or module boundaries, God-file risk, dependency direction, platform wrappers, change coupling, configuration, naming, comments |
 | [references/data-state-and-runtime.md](references/data-state-and-runtime.md) | persistence or databases, data contracts, units, time, state ownership, migrations, compatibility, error handling, async or concurrency, performance |
 | [references/repository-and-delivery.md](references/repository-and-delivery.md) | tests, tooling, evidence and artifacts, Git and commits, documentation, ADRs, dependencies, generated files, build and release, secrets and private data, dead code |

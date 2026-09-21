@@ -33,20 +33,20 @@ The skill is in this repo — [`skills/`](skills).
 One line, for every project on your machine:
 
 ```bash
-npx skills add itsmk91/agent-engineering-standard -g
+npx skills add workspace-labs/agent-engineering-standard -g
 ```
 
 Or copy it by hand:
 
 ```bash
-git clone https://github.com/itsmk91/agent-engineering-standard.git
+git clone https://github.com/workspace-labs/agent-engineering-standard.git
 mkdir -p ~/.claude/skills
 cp -R agent-engineering-standard/skills/software-engineering-build-standard ~/.claude/skills/
 ```
 
 Codex reads `~/.codex/skills/` instead; the skill ships the `agents/openai.yaml` it expects.
 
-Agents load it on their own when they build, extend, restructure or review software. The core is one page — [`SKILL.md`](skills/software-engineering-build-standard/SKILL.md) — and four reference files load only when the work needs them. A project's own rules, its recorded decisions and the owner's instructions always come first.
+Agents load it on their own when they build, extend, restructure or review software. The core is one page — [`SKILL.md`](skills/software-engineering-build-standard/SKILL.md) — and five reference files load only when the work needs them — among them a [layout map](skills/software-engineering-build-standard/references/layout-map.md) that gives a project's full folder structure with the moment each piece becomes due, so nothing is created before the product earns it. A project's own rules, its recorded decisions and the owner's instructions always come first.
 
 ---
 
@@ -68,4 +68,4 @@ Agents load it on their own when they build, extend, restructure or review softw
 
 ---
 
-<sub>by Workspace Labs · Drawn from a working system, not a thought experiment — see <a href="https://github.com/itsmk91/workspace">a showcase of it running</a>, and the patterns beside it: <a href="https://github.com/itsmk91/agent-builder-handoff">a builder handoff for AI agents</a>, <a href="https://github.com/itsmk91/agent-health-checks">health checks for AI agents</a> and <a href="https://github.com/itsmk91/agent-separation-of-duties">separation of duties for AI agents</a>.</sub>
+<sub>by Workspace Labs · Drawn from a working system, not a thought experiment — see <a href="https://github.com/workspace-labs/workspace">a showcase of it running</a>, and the patterns beside it: <a href="https://github.com/workspace-labs/agent-builder-handoff">a builder handoff for AI agents</a>, <a href="https://github.com/workspace-labs/agent-health-checks">health checks for AI agents</a> and <a href="https://github.com/workspace-labs/agent-separation-of-duties">separation of duties for AI agents</a>.</sub>

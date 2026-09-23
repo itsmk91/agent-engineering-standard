@@ -139,7 +139,7 @@ Never "make it work" by destroying data or bypassing safeguards.
 
 Working code alone is not done. Before declaring substantial work complete, explicitly verify the requested behavior, architectural placement, tests, build/type/lint status where relevant, Git state where relevant, documentation impact, known risks, and whether a Human Gate is required. Then apply the definition of done, the self-check and the handoff in [references/review-and-completion.md](references/review-and-completion.md), in proportion to the task. Report any concerning self-check answer with the smallest appropriate correction. Never claim completion for verification that was not performed — say what remains unverified.
 
-When you are the builder and the work changed code or other project files, load the `engineering-builder-handoff` skill before your final message; it sets the handoff's format. Do not load it for review-only or explanation-only work.
+When you are the builder and the work changed code or other project files, load the `engineering-builder-handoff` skill, if it is installed, before your final message; it sets the handoff's format. Do not load it for review-only or explanation-only work.
 
 ## References — load only what the task needs
 

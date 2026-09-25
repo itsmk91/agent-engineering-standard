@@ -141,21 +141,23 @@ Working code alone is not done. Before declaring substantial work complete, expl
 
 When you are the builder and the work changed code or other project files, load the `engineering-builder-handoff` skill, if it is installed, before your final message; it sets the handoff's format. Do not load it for review-only or explanation-only work.
 
-### Closing an audit or a multi-slice restructuring (§73)
+### Closing an audit or a restructuring (§73)
 
-Only when work that began from an engineering audit (§28) or a multi-slice restructuring plan (§20, §21) finishes or is stopped — including by the owner partway — reconcile it against the ORIGINAL audit or plan, not only the approved slices, and record the result where the project keeps its plan or debt register (§59):
+When work that began from an engineering audit (§28), or any substantial or architectural restructuring (§33–§35) — whatever it is called, however it began and however many slices it has — finishes or is stopped, including by the owner partway, reconcile it against the ORIGINAL audit, or the problems the restructuring set out to fix, not only the approved slices, and record the result where the project keeps its plan or debt register (§59):
 
     ENGINEERING CLOSURE
     Approved scope:      <slices> — complete / not complete
-    Original findings:   <n> resolved · <n> partly resolved · <n> deferred · <n> rejected · <n> still open
+    Original findings:   <n> resolved · <n> partly resolved · <n> deferred · <n> accepted as debt · <n> rejected · <n> still open
     Target architecture: approved / partly decided / not decided
-    Remaining debt:      each item that blocks or affects planned work — why deferred, impact, the
+    Remaining debt:      each item that blocks or affects planned work — why it remains, impact, the
                          work it blocks, what reopens it (§57); the rest counted, with a pointer to the register
-    Status:              APPROVED SCOPE COMPLETE — <what is not complete>, or a broad status (below)
+    Status:              STOPPED — APPROVED SCOPE INCOMPLETE — <what is unfinished>, or
+                         APPROVED SCOPE COMPLETE — <what is not complete>, or a broad status (below)
 
-- A status that names the audit's goal — foundation, restructuring, reorganization or engineering "complete" or "healthy" — or says "no findings remain" is allowed only when nothing is partly resolved, deferred or still open and the target architecture is approved. Narrowing or renaming the phase to match the approved slices does not change this.
+- `APPROVED SCOPE COMPLETE` is allowed only when the approved scope's own completion criteria are met. When they are not — for example when the owner stops the work partway through what was approved — the status is `STOPPED — APPROVED SCOPE INCOMPLETE`, naming what is unfinished.
+- A status that names the work's goal — foundation, restructuring, reorganization or engineering "complete" or "healthy" — or says "no findings remain" is allowed only when nothing is partly resolved, deferred, accepted as debt or still open and the target architecture is approved. Narrowing or renaming the phase to match the approved slices does not change this.
 - A count of findings names its set: "no open findings in the approved slices" is not "no open findings in the audit".
-- A finding the owner accepts permanently counts as rejected, with the reason. Every later copy of the closure — handoff, plan, README, changelog or notes — carries the same status.
+- Rejected means the finding itself was wrong or does not apply, with the reason. A real problem the owner accepts permanently is accepted as debt: it stays in the remaining debt and is never presented as solved (§57), and declining a proposed fix never rejects the problem it was meant to fix. Every later copy of the closure — handoff, plan, README, changelog or notes — carries the same status.
 
 ## References — load only what the task needs
 

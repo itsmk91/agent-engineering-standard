@@ -11,7 +11,7 @@ Professional engineering is not maximum abstraction, excessive folders, unnecess
 
 **Goal (§65):** the software works today, its structure explains itself, another engineer can safely change it tomorrow, and the architecture is no more complicated than the product actually requires.
 
-Rule IDs §1–§65 are stable anchors for this standard; findings, plans and handoffs may cite them.
+Rule IDs §1–§65 and §73 are stable anchors for this standard; findings, plans and handoffs may cite them.
 
 ## Precedence (§61)
 
@@ -72,7 +72,7 @@ Before substantial feature development, decide: repository boundary, source stru
 
 Do not refactor immediately:
 
-AUDIT → CURRENT ARCHITECTURE → FINDINGS → TARGET ARCHITECTURE → HUMAN GATE → INCREMENTAL MIGRATION
+AUDIT → CURRENT ARCHITECTURE → FINDINGS → TARGET ARCHITECTURE → HUMAN GATE → INCREMENTAL MIGRATION → RECONCILE AND CLOSE (§73)
 
 Distinguish actual correctness risk, structural debt, maintainability debt, cleanup and optional improvement. Report findings in the §29 format and never inflate severity to justify restructuring.
 
@@ -140,6 +140,22 @@ Never "make it work" by destroying data or bypassing safeguards.
 Working code alone is not done. Before declaring substantial work complete, explicitly verify the requested behavior, architectural placement, tests, build/type/lint status where relevant, Git state where relevant, documentation impact, known risks, and whether a Human Gate is required. Then apply the definition of done, the self-check and the handoff in [references/review-and-completion.md](references/review-and-completion.md), in proportion to the task. Report any concerning self-check answer with the smallest appropriate correction. Never claim completion for verification that was not performed — say what remains unverified.
 
 When you are the builder and the work changed code or other project files, load the `engineering-builder-handoff` skill, if it is installed, before your final message; it sets the handoff's format. Do not load it for review-only or explanation-only work.
+
+### Closing an audit or a multi-slice restructuring (§73)
+
+Only when work that began from an engineering audit (§28) or a multi-slice restructuring plan (§20, §21) finishes or is stopped — including by the owner partway — reconcile it against the ORIGINAL audit or plan, not only the approved slices, and record the result where the project keeps its plan or debt register (§59):
+
+    ENGINEERING CLOSURE
+    Approved scope:      <slices> — complete / not complete
+    Original findings:   <n> resolved · <n> partly resolved · <n> deferred · <n> rejected · <n> still open
+    Target architecture: approved / partly decided / not decided
+    Remaining debt:      each item that blocks or affects planned work — why deferred, impact, the
+                         work it blocks, what reopens it (§57); the rest counted, with a pointer to the register
+    Status:              APPROVED SCOPE COMPLETE — <what is not complete>, or a broad status (below)
+
+- A status that names the audit's goal — foundation, restructuring, reorganization or engineering "complete" or "healthy" — or says "no findings remain" is allowed only when nothing is partly resolved, deferred or still open and the target architecture is approved. Narrowing or renaming the phase to match the approved slices does not change this.
+- A count of findings names its set: "no open findings in the approved slices" is not "no open findings in the audit".
+- A finding the owner accepts permanently counts as rejected, with the reason. Every later copy of the closure — handoff, plan, README, changelog or notes — carries the same status.
 
 ## References — load only what the task needs
 
